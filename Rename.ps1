@@ -11,7 +11,3 @@ Get-ChildItem -File -Recurse | % { Rename-Item -Path $_.PSPath -NewName $_.Name.
 # Use this to change folder names:
 
 Get-ChildItem -Directory -Recurse -Filter *$find_str* | ForEach-Object -Process {Rename-item $_.fullname -NewName ($_.fullname -replace $find_str, $replace_str) }
-
-# Would Like to mix them together but for now use them separately.
-
-# Need to change all files before folder names will change?
